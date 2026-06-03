@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Prueba3 : MonoBehaviour
@@ -18,7 +19,6 @@ public class Prueba3 : MonoBehaviour
         rb.isKinematic = false;
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-        // Bloqueamos rotación para que las gafas controlen la visión
         rb.constraints = RigidbodyConstraints.FreezeRotationX |
                          RigidbodyConstraints.FreezeRotationY |
                          RigidbodyConstraints.FreezeRotationZ;
@@ -26,8 +26,15 @@ public class Prueba3 : MonoBehaviour
 
     void FixedUpdate()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = 0f;
+        float z = 0f;
+
+        // Lee el joystick izquierdo del mando Bluetooth
+        if (Gamepad.current != null)
+        {
+            x = Gamepad.current.leftStick.x.ReadValue();
+            z = Gamepad.current.leftStick.y.ReadValue();
+        }
 
         if (camaraVR != null)
         {

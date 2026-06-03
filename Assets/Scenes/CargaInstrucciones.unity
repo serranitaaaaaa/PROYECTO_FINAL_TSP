@@ -582,6 +582,14 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7253685286364951107, guid: 2d27360798e77474c82ac6e6abaadf83, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253685286364951107, guid: 2d27360798e77474c82ac6e6abaadf83, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253685286364951107, guid: 2d27360798e77474c82ac6e6abaadf83, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -1313,8 +1321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7699716dcc7e24ea782f4185eff0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GazeFillSelection
-  fillTime: 1.5
-  radialImage: {fileID: 0}
+  fillTime: 2
+  radialImage: {fileID: 1585989349}
   onFillComplete:
     m_PersistentCalls:
       m_Calls:

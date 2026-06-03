@@ -114,3 +114,9 @@ Assets/Plugins/iOS/Firebase*
 # Unity build/debug folders
 Backrooms_BurstDebugInformation_DoNotShip/
 build_BackUpThisFolder_ButDontShipItWithYourGame/
+
+# Unity build backup
+ProyectoFinalTSP_BackUpThisFolder_ButDontShipItWithYourGame/
+
+# Unity upgrade log
+UpgradeLog.htm

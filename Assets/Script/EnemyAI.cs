@@ -53,7 +53,7 @@ public class EnemyAI : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, targetPlayer.position);
 
-        // ESTADO 1: Atrapando al jugador (AÑADIDO RAYCAST PARA EVITAR ATRAVESAR PAREDES)
+        //Atrapando al jugador
         if (distanceToPlayer < detectionRange)
         {
             Vector3 dirToPlayer = (targetPlayer.position - transform.position).normalized;
@@ -65,7 +65,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        // ESTADO 2: Persiguiendo
+        // Persiguiendo
         if (CanSeePlayer())
         {
             agent.isStopped = false;
@@ -74,14 +74,14 @@ public class EnemyAI : MonoBehaviour
             memoryTimer = memoryTime;
             GestionarSonido(sonidoPersecucion);
         }
-        // ESTADO 3: Buscando
+        // Buscando
         else if (memoryTimer > 0)
         {
             memoryTimer -= Time.deltaTime;
             if (!agent.pathPending && agent.remainingDistance < 1.5f) memoryTimer = 0;
             GestionarSonido(sonidoPersecucion);
         }
-        // ESTADO 4: Patrullando o Quieto
+        // Patrullando
         else
         {
             PerformPatrol();
@@ -94,7 +94,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (bocinaMinotauro != null && clipDeseado != null)
         {
-            // Solo reinicia el clip si es diferente al que ya está sonando
+            
             if (sonidoActual != clipDeseado)
             {
                 sonidoActual = clipDeseado;
@@ -107,26 +107,26 @@ public class EnemyAI : MonoBehaviour
     private void CatchPlayer()
     {
         isCatching = true;
-        agent.isStopped = true; // Se detiene para atacar
+        agent.isStopped = true; 
         agent.ResetPath();
 
         Vector3 lookDir = targetPlayer.position - transform.position;
         lookDir.y = 0;
         transform.rotation = Quaternion.LookRotation(lookDir);
 
-        // Disparamos la animación
+        // Animación
         if (anim != null) anim.SetTrigger("Attack");
 
         GestionarSonido(sonidoAtaque);
 
-        // El PlayerManager ahora se encarga de esperar los 1.5s y resetear
+        
         PlayerManager pm = targetPlayer.GetComponent<PlayerManager>();
         if (pm != null) pm.IniciarJumpscare(transform);
     }
 
     [Header("Generación Aleatoria")]
-    public float radioDelLaberinto = 100f; // Ajusta esto al tamaño total de tu laberinto
-    public float distanciaSegura = 20f;    // Qué tan lejos debe aparecer del jugador como mínimo
+    public float radioDelLaberinto = 100f; 
+    public float distanciaSegura = 20f;    
 
     public void ResetPositionRandom()
     {
@@ -135,22 +135,22 @@ public class EnemyAI : MonoBehaviour
         Vector3 puntoFinal = transform.position; // Fallback por si acaso
         bool puntoEncontrado = false;
 
-        // Intentamos hasta 10 veces encontrar un buen punto aleatorio
+        // Intentamos hasta 10 veces encontrar un punto aleatorio
         for (int i = 0; i < 10; i++)
         {
-            // Tomamos un punto al azar dentro de una esfera del tamaño del laberinto
+            
             Vector3 randomPos = Random.insideUnitSphere * radioDelLaberinto;
-            randomPos.y = transform.position.y; // Mantenemos la altura
+            randomPos.y = transform.position.y; 
 
-            // Verificamos si ese punto cae en el suelo navegable (NavMesh)
+            
             if (NavMesh.SamplePosition(randomPos, out NavMeshHit hit, radioDelLaberinto, NavMesh.AllAreas))
             {
-                // Filtro de seguridad: ¿Está lo bastante lejos del jugador?
+                
                 if (Vector3.Distance(hit.position, targetPlayer.position) > distanciaSegura)
                 {
                     puntoFinal = hit.position;
                     puntoEncontrado = true;
-                    break; // Encontramos un buen punto, salimos del bucle
+                    break; 
                 }
             }
         }
@@ -165,7 +165,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         agent.enabled = true;
-        agent.isStopped = false; // ¡Libera al minotauro!
+        agent.isStopped = false; 
         agent.ResetPath();
         agent.speed = patrolSpeed;
         memoryTimer = 0;

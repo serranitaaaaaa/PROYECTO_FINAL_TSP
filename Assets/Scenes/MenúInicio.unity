@@ -171,7 +171,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28309906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ac997c79a5661c4ba6c93e510bd8628, type: 3}
   m_Name: 
@@ -384,7 +384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015258789, y: 141}
+  m_AnchoredPosition: {x: -21, y: 141}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165512356
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "T\xEDtulo"
+  m_text: Laberinto
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -35.203712, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -648,14 +648,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283264095}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 595.3, y: -174.06, z: -18.541}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2050162559}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &416957817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1216,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8467861774054027376, guid: 2d27360798e77474c82ac6e6abaadf83, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1830009771}
+    - targetCorrespondingSourceObject: {fileID: 8467861774054027376, guid: 2d27360798e77474c82ac6e6abaadf83, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1830009777}
   m_SourcePrefab: {fileID: 100100000, guid: 2d27360798e77474c82ac6e6abaadf83, type: 3}
 --- !u!1 &978121473
 GameObject:
@@ -1697,7 +1700,7 @@ GameObject:
   - component: {fileID: 1462331830}
   - component: {fileID: 1462331834}
   - component: {fileID: 1462331833}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Marcadores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1831,7 +1834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7699716dcc7e24ea782f4185eff0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GazeFillSelection
-  fillTime: 1.5
+  fillTime: 2
   radialImage: {fileID: 1126138118}
   onFillComplete:
     m_PersistentCalls:
@@ -2050,14 +2053,14 @@ RectTransform:
   m_GameObject: {fileID: 1772019205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.44999, z: 1}
+  m_LocalScale: {x: 0.833884, y: 0.5518227, z: 1.2263}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050162559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -185.25266, y: -223.4231}
+  m_AnchoredPosition: {x: -231, y: -199}
   m_SizeDelta: {x: 345.155, y: 291.8641}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772019207
@@ -2080,7 +2083,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hecho por: Los pilares de la FI\nHuerta Serrano Valentina\nP\xE9rez Acolt
+  m_text: "Hecho por: Los pilares de la FI\nHuertas Serrano Valentina\nP\xE9rez Acolt
     Luis Miguel\nUrrutio Ortu\xF1o Valeria Estefan\xEDa"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2090,8 +2093,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294260557
-  m_fontColor: {r: 0.3012007, g: 0.21605544, b: 0.9622642, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2108,7 +2111,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.2
+  m_fontSize: 38
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2147,7 +2150,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -101.31964, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2173,11 +2176,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830009764}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 573ac36f171dfb54f949a42f2515d268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IniciarVR
+--- !u!114 &1830009777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830009764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72afcad20c4985e4f8bcfff3b75c908f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReticleGazeInteractor
+  maxDistance: 1000
+  interactiveLayers:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &2036850230
 GameObject:
   m_ObjectHideFlags: 0
